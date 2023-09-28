@@ -1,0 +1,44 @@
+{
+  "id": "001M4381",
+  "countryCode": "SG",
+  "locale": "en-SG",
+  "name": "Shell PANOLIN S4 HLP Synth 46",
+  "description": "Fully synthetic, high-performance and zinc-free EAL for hydraulic systems",
+  "family": "-",
+  "parentCategory": null,
+  "category": "Hydraulic Fluids",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Premium",
+  "viscosityGrade": "46",
+  "viscosityType": "ISO",
+  "fluidType": "Synthetic",
+  "fluidSubType": "Ester",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/e780c7cb-29f8-49f4-9281-c7d08ab0d817.pdf",
+      "type": "GTDS",
+      "name": "PANOLIN S4 HLP Synth 46 EN TDG V1.0 21-Jul-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02646771.PDF",
+      "type": "LMSDS",
+      "name": "PANOLIN S4 HLP Synth 46 Singapore EN 140001435547 EHS V1.0 25-SEP-2023",
+      "language": "EN"
+    }
+  ],
+  "packs": [],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "Shell PANOLIN S4 HLP Synth is our highest performance and industry leading biodegradable saturated ester (HEES) type synthetic hydraulic fluid. Only Bosch approved HEES fluid. Special zinc-free additive technology, formulated with high-performance fully synthetic saturated esters offer increased machinery efficiency through enhanced oil life and premium wear protection. Particularly suited for use in environmentally sensitive areas and in stationary and mobile hydraulic systems including construction, earthmoving and forestry.",
+  "physicalCharacteristics": [],
+  "active": false,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

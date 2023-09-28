@@ -1,0 +1,44 @@
+{
+  "id": "001M4386",
+  "countryCode": "SG",
+  "locale": "en-SG",
+  "name": "Shell PANOLIN S4 Hydraulic OS EAL 32",
+  "description": "Fully synthetic zinc-free, high-performance EAL for hydraulic systems",
+  "family": "-",
+  "parentCategory": null,
+  "category": "Hydraulic Fluids",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Premium",
+  "viscosityGrade": "32",
+  "viscosityType": "ISO",
+  "fluidType": "Synthetic",
+  "fluidSubType": "Ester",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/294738ca-cc77-4e96-a1c5-b3840d02bab4.pdf",
+      "type": "GTDS",
+      "name": "PANOLIN S4 Hydraulic OS EAL 32 EN TDG V1.0 11-Jul-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02645031.PDF",
+      "type": "LMSDS",
+      "name": "PANOLIN S4 Hydraulic OS EAL 32 Singapore EN 140001435547 EHS V1.0 18-SEP-2023",
+      "language": "EN"
+    }
+  ],
+  "packs": [],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "Shell PANOLIN S4 Hydraulic OS EAL has a zinc-free additive technology, blended with high-performance fully synthetic saturated esters which provides an excellent blend of lubrication performance and environmental acceptability. Readily biodegradable with a low ecotoxicity, particularly suited for subsea, offshore, and marine applications where compliance is required including US waters.",
+  "physicalCharacteristics": [],
+  "active": false,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

@@ -1,0 +1,50 @@
+{
+  "id": "007A0321",
+  "countryCode": "FR",
+  "locale": "fr-FR",
+  "name": "Shell PANOLIN S4 HLP Synth EAL 100",
+  "description": "Fully synthetic zinc-free, high-performance EAL for hydraulic systems",
+  "family": "-",
+  "parentCategory": null,
+  "category": "Fluides hydrauliques",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Premium",
+  "viscosityGrade": "100",
+  "viscosityType": "ISO",
+  "fluidType": "Synthetic",
+  "fluidSubType": "Ester",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/bc58d5b5-da1b-4ccb-b55e-4983a8f1c7d9.pdf",
+      "type": "GTDS",
+      "name": "PANOLIN S4 HLP Synth EAL 100 EN TDG V1.0 17-Jul-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02646548.PDF",
+      "type": "LMSDS",
+      "name": "PANOLIN S4 HLP Synth EAL 100 France EN 140003182031 EHS V1.0 25-SEP-2023",
+      "language": "EN"
+    },
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02646513.PDF",
+      "type": "LMSDS",
+      "name": "PANOLIN S4 HLP Synth EAL 100 France FR 140003182031 EHS V1.0 25-SEP-2023",
+      "language": "FR"
+    }
+  ],
+  "packs": [],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "",
+  "physicalCharacteristics": [],
+  "active": false,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

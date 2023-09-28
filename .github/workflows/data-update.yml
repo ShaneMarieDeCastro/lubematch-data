@@ -1,0 +1,255 @@
+name: Data Update
+on:
+  push:
+    branches:
+      - data-update
+
+env:
+  DE_DE_CREDENTIALS: ${{ secrets.DE_DE_CREDENTIALS }}
+  EN_AU_CREDENTIALS: ${{ secrets.EN_AU_CREDENTIALS }}
+  EN_CA_CREDENTIALS: ${{ secrets.EN_CA_CREDENTIALS }}
+  EN_IE_CREDENTIALS: ${{ secrets.EN_IE_CREDENTIALS }}
+  EN_IN_CREDENTIALS: ${{ secrets.EN_IN_CREDENTIALS }}
+  EN_MY_CREDENTIALS: ${{ secrets.EN_MY_CREDENTIALS }}
+  EN_PH_CREDENTIALS: ${{ secrets.EN_PH_CREDENTIALS }}
+  EN_SG_CREDENTIALS: ${{ secrets.EN_SG_CREDENTIALS }}
+  EN_UK_CREDENTIALS: ${{ secrets.EN_UK_CREDENTIALS }}
+  EN_US_CREDENTIALS: ${{ secrets.EN_US_CREDENTIALS }}
+  FR_CA_CREDENTIALS: ${{ secrets.FR_CA_CREDENTIALS }}
+  ID_ID_CREDENTIALS: ${{ secrets.ID_ID_CREDENTIALS }}
+  RU_RU_CREDENTIALS: ${{ secrets.RU_RU_CREDENTIALS }}
+  SALESFORCE_API_CLIENT_ID: None
+  SALESFORCE_API_CLIENT_SECRET: None
+  SALESFORCE_API_PASSWORD: None
+  NODE_ENV: development
+
+jobs:
+  data-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Data Tests - O2N
+        working-directory: cli/typesense
+        run: python3 data_tests.py old2new ${{ secrets.TYPESENSE_API_KEY }}
+      - name: Data Tests - XREF
+        working-directory: cli/typesense
+        run: python3 data_tests.py xref ${{ secrets.TYPESENSE_API_KEY }}
+      - name: Data Tests - ACTIVE
+        working-directory: cli/typesense
+        run: python3 data_tests.py products ${{ secrets.TYPESENSE_API_KEY }}
+
+  update-typesense:
+    needs: ["data-tests"]
+    environment: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: install python script dependencies
+        run: pip3 install -r update-script-requirements.txt
+      - name: Run Update Script
+        run: ./update_typesense_data.sh
+      - name: Clone remote repo
+        run: |
+          mkdir -p /tmp/update
+          cd /tmp/update 
+          git clone https://${{ secrets.ACCESS_TOKEN_GITHUB }}@github.com/shellagilehub/nexus-typesense.git
+      - name: Copying the updated data into the repo (staging)
+        run: |
+          cd /tmp/update/nexus-typesense
+          git fetch
+          git switch staging
+          rm -rf data
+          cp -R /tmp/typesense ./data
+      - name: Pushing updated data (staging)
+        run: |
+          cd /tmp/update/nexus-typesense
+          git status
+          git add .
+          git status
+          git config --global user.email "h.parchand@shell.com" && git config --global user.name "harshadparchandtheagilehub"
+          git commit -m "DATA UPDATE"
+          git push https://${{ secrets.ACCESS_TOKEN_GITHUB }}@github.com/shellagilehub/nexus-typesense.git
+      - name: Copying the updated data into the repo (develop)
+        run: |
+          cd /tmp/update/nexus-typesense
+          git fetch
+          git switch develop
+          rm -rf data
+          cp -R /tmp/typesense ./data
+      - name: Pushing updated data (develop)
+        run: |
+          cd /tmp/update/nexus-typesense
+          git status
+          git add .
+          git status
+          git config --global user.email "h.parchand@shell.com" && git config --global user.name "harshadparchandtheagilehub"
+          git commit -m "DATA UPDATE"
+          git push https://${{ secrets.ACCESS_TOKEN_GITHUB }}@github.com/shellagilehub/nexus-typesense.git
+      - name: Copying the updated data into the repo (production)
+        run: |
+          cd /tmp/update/nexus-typesense
+          git fetch
+          git switch master
+          rm -rf data
+          cp -R /tmp/typesense ./data
+      - name: Pushing updated data (production)
+        run: |
+          cd /tmp/update/nexus-typesense
+          git status
+          git add .
+          git status
+          git config --global user.email "h.parchand@shell.com" && git config --global user.name "harshadparchandtheagilehub"
+          git commit -m "DATA UPDATE"
+          git push https://${{ secrets.ACCESS_TOKEN_GITHUB }}@github.com/shellagilehub/nexus-typesense.git
+
+  update-dialogflow:
+    needs: ["data-tests"]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - run: mkdir -p /tmp/repos
+
+      - name: Setup node:${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Clone ses-gql
+        working-directory: /tmp/repos
+        run: |
+          git clone https://${{ secrets.ACCESS_TOKEN_GITHUB }}@github.com/shellagilehub/nexus-ses-gql.git
+          cd nexus-ses-gql
+          git fetch
+          git branch
+          git switch gen-entities
+
+      - name: Clone lubechat-server
+        working-directory: /tmp/repos
+        run: |
+          git clone https://${{ secrets.ACCESS_TOKEN_GITHUB }}@github.com/shellagilehub/nexus-lubechat-server.git
+          cd nexus-lubechat-server
+          git fetch
+          git branch
+          git switch new-update-script
+
+      - name: Install packages
+        working-directory: /tmp/repos/nexus-ses-gql
+        run: |
+          yarn
+
+      - name: Install packages
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: yarn
+
+      - name: Copy new data
+        run: |
+          rm -rf /tmp/repos/nexus-ses-gql/resources/products
+          mkdir -p /tmp/repos/nexus-ses-gql/resources/products
+          cp cli/typesense/o2n.json /tmp/repos/nexus-ses-gql/resources/products
+          cp cli/typesense/xref.json /tmp/repos/nexus-ses-gql/resources/products
+          cp -R out/. /tmp/repos/nexus-ses-gql/resources/products
+
+      - name: Generate entity files in SES
+        working-directory: /tmp/repos/nexus-ses-gql
+        run: |
+          yarn build
+          yarn dialogflow:generate-product-entities
+          yarn dialogflow:generate-xref-entities
+
+      - name: Delete old entity files in lubechat-server
+        working-directory: /tmp/repos/nexus-lubechat-server/resources/entities
+        run: |
+          rm -rf dynamic
+          mkdir dynamic
+
+      - name: Copy entity files to lubechat-server
+        working-directory: /tmp/repos/nexus-ses-gql
+        run: |
+
+          find . -name "entity-" -exec cp {} /tmp/repos/nexus-lubechat-server/resources/entities/dynamic \;
+          find /tmp/repos/nexus-lubechat-server/resources/entities/dynamic
+
+      - name: Update dialogflow intents en-US
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-US
+
+      - name: Update dialogflow intents en-IN
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-IN
+
+      - name: Update dialogflow intents en-GB
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-GB
+
+      - name: Update dialogflow intents en-IE
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-IE
+
+      - name: Update dialogflow intents en-CA
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-CA
+
+      - name: Update dialogflow intents en-AU
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-AU
+
+      - name: Update dialogflow intents en-MY
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-MY
+
+      - name: Update dialogflow intents en-PH
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-PH
+
+      - name: Update dialogflow intents en-SG
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow en-SG
+
+      - name: Update dialogflow intents de-DE
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow de-DE
+
+      - name: Update dialogflow intents id-ID
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow id-ID
+
+      - name: Update dialogflow intents ru-RU
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow ru-RU
+
+      - name: Update dialogflow intents fr-CA
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: |
+          yarn build
+          yarn update-dialogflow fr-CA
+
+      - name: Run Tests in Lubechat Server
+        working-directory: /tmp/repos/nexus-lubechat-server
+        run: yarn test:draft

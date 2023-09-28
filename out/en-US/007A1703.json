@@ -1,0 +1,44 @@
+{
+  "id": "007A1703",
+  "countryCode": "US",
+  "locale": "en-US",
+  "name": "MEG SKU 220004421",
+  "description": "Coolant base fluid",
+  "family": "-",
+  "parentCategory": null,
+  "category": "Coolants/Antifreeze - Concentrate",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "-",
+  "viscosityGrade": "Other (unspecified)",
+  "viscosityType": "-",
+  "fluidType": "Other",
+  "fluidSubType": "-",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/466838ab-1683-4a48-b5b5-d43ce856755b.pdf",
+      "type": "GTDS",
+      "name": "MEG SKU 220004421 Introduction EN TDG V1.0 15-Sep-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02646519.PDF",
+      "type": "LMSDS",
+      "name": "MEG SKU 220004421 Introduction United States EN 140002686046 EHS V1.1 25-SEP-2023",
+      "language": "EN"
+    }
+  ],
+  "packs": [],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "",
+  "physicalCharacteristics": [],
+  "active": false,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

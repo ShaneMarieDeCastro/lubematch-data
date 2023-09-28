@@ -1,0 +1,83 @@
+{
+  "id": "001I5457",
+  "countryCode": "CA",
+  "locale": "en-CA",
+  "name": "Shell EcoSafe Flushing Fluid",
+  "description": "Special Purpose Hydraulic Fluid - FF",
+  "family": "Generic Branded Product",
+  "parentCategory": null,
+  "category": "Hydraulic Fluids",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Premium",
+  "viscosityGrade": "Other (unspecified)",
+  "viscosityType": "-",
+  "fluidType": "Synthetic",
+  "fluidSubType": "PAG",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/ea28f94d-44ab-43e2-a631-0184ce9983ee.pdf",
+      "type": "GTDS",
+      "name": "Shell EcoSafe Flushing Fluid EN TDG V1.2 21-Sep-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en-CA/1adcce94-7e74-4805-b1d2-e90e6f3df676.pdf",
+      "type": "LTDS",
+      "name": "Shell EcoSafe EHC Flushing Fluid Canada EN TDG V1.2 21-Sep-2023",
+      "language": "EN"
+    },
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02289629.PDF",
+      "type": "LMSDS",
+      "name": "Shell EcoSafe EHC Flushing Fluid Canada FR 140006579500 EHS V1.2 24-APR-2021",
+      "language": "FR"
+    },
+    {
+      "href": "https://www.shell-livedocs.com/data/published/fr-CA/d1bd7f13-ab11-49f5-82aa-58dd5ad5f553.pdf",
+      "type": "LTDS",
+      "name": "Shell EcoSafe EHC Flushing Fluid Canada FR TDG V1.2 22-Sep-2023",
+      "language": "FR"
+    },
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02290699.PDF",
+      "type": "LMSDS",
+      "name": "Shell EcoSafe EHC Flushing Fluid Canada EN 140006579500 EHS V1.2 24-APR-2021",
+      "language": "EN"
+    }
+  ],
+  "packs": [
+    {
+      "code": "001I5457_002VJ3_NAMD",
+      "name": "Drum 55 Gal T/H RYTop (1)",
+      "size": "55",
+      "uom": "Gal",
+      "pack": "Drum",
+      "materialCode": "550057295",
+      "margin": "Not found",
+      "packShot": ""
+    },
+    {
+      "code": "001I5457_002X4L_NAMD",
+      "name": "IBC 975 L Plastic W (1)",
+      "size": "975",
+      "uom": "L",
+      "pack": "IBC",
+      "materialCode": "550057296",
+      "margin": "Not found",
+      "packShot": ""
+    }
+  ],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "",
+  "physicalCharacteristics": [],
+  "active": true,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

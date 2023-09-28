@@ -1,0 +1,71 @@
+{
+  "id": "001I5457",
+  "countryCode": "US",
+  "locale": "en-US",
+  "name": "Shell EcoSafe Flushing Fluid",
+  "description": "Special Purpose Hydraulic Fluid - FF",
+  "family": "Generic Branded Product",
+  "parentCategory": null,
+  "category": "Hydraulic Fluids",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Premium",
+  "viscosityGrade": "Other (unspecified)",
+  "viscosityType": "-",
+  "fluidType": "Synthetic",
+  "fluidSubType": "PAG",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/ea28f94d-44ab-43e2-a631-0184ce9983ee.pdf",
+      "type": "GTDS",
+      "name": "Shell EcoSafe Flushing Fluid EN TDG V1.2 21-Sep-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en-US/1d0b842b-1d08-40d9-a8b3-741a6fcd0c4b.pdf",
+      "type": "LTDS",
+      "name": "Shell EcoSafe EHC Flushing Fluid United States EN TDG V1.2 21-Sep-2023",
+      "language": "EN"
+    },
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02563620.PDF",
+      "type": "LMSDS",
+      "name": "Shell EcoSafe EHC Flushing Fluid United States EN 140002686046 EHS V1.1 14-OCT-2020",
+      "language": "EN"
+    }
+  ],
+  "packs": [
+    {
+      "code": "001I5457_002X4L_NAMD",
+      "name": "IBC 975 L Plastic W (1)",
+      "size": "975",
+      "uom": "L",
+      "pack": "IBC",
+      "materialCode": "550057296",
+      "margin": "Not found",
+      "packShot": ""
+    },
+    {
+      "code": "001I5457_002VJ3_NAMD",
+      "name": "Drum 55 Gal T/H RYTop (1)",
+      "size": "55",
+      "uom": "Gal",
+      "pack": "Drum",
+      "materialCode": "550057295",
+      "margin": "2.86040302156237",
+      "packShot": ""
+    }
+  ],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "",
+  "physicalCharacteristics": [],
+  "active": true,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

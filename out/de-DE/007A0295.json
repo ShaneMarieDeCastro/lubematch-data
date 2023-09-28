@@ -1,0 +1,50 @@
+{
+  "id": "007A0295",
+  "countryCode": "DE",
+  "locale": "de-DE",
+  "name": "Shell PANOLIN S4 HLP Synth EAL 32",
+  "description": "Fully synthetic zinc-free, high-performance EAL for hydraulic systems",
+  "family": "-",
+  "parentCategory": "Hydrauliköle",
+  "category": "Hydrauliköle",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Premium",
+  "viscosityGrade": "32",
+  "viscosityType": "ISO",
+  "fluidType": "Synthetic",
+  "fluidSubType": "Ester",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/11d3cc63-2459-46f0-b623-ca7bdf961ba0.pdf",
+      "type": "GTDS",
+      "name": "PANOLIN S4 HLP Synth EAL 32 EN TDG V1.0 11-Jul-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02646694.PDF",
+      "type": "LMSDS",
+      "name": "PANOLIN S4 HLP Synth EAL 32 Germany EN 140001492039 EHS V1.0 25-SEP-2023",
+      "language": "EN"
+    },
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02646693.PDF",
+      "type": "LMSDS",
+      "name": "PANOLIN S4 HLP Synth EAL 32 Germany DE 140001492039 EHS V1.0 25-SEP-2023",
+      "language": "DE"
+    }
+  ],
+  "packs": [],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "Shell PANOLIN HLP Synth EAL is a zinc-free additive technology, blended with high-performance fully synthetic saturated esters provides an outstanding blend of lubrication performance and environmental acceptability. Readily biodegradable with a low ecotoxicity, particularly suited for use in environmentally sensitive areas where eco-label compliance is required including US waters. For use in stationary and mobile hydraulic systems including marine and deck equipment, construction and forestry.",
+  "physicalCharacteristics": [],
+  "active": false,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "007A0355",
+  "countryCode": "PL",
+  "locale": "pl-PL",
+  "name": "Shell Risella C 420",
+  "description": "Shell Risella C 420 is a high quality re-engineered paraffinic process oil.",
+  "family": "-",
+  "parentCategory": "Pozostałe oleje przemysłowe",
+  "category": "Oleje procesowe - parafinowe",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Mainstream",
+  "viscosityGrade": "Other (unspecified)",
+  "viscosityType": "-",
+  "fluidType": "Synthetic",
+  "fluidSubType": "Synthetic",
+  "globalDocs": [],
+  "localDocs": [
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02643599.PDF",
+      "type": "LMSDS",
+      "name": "Risella C 420 - Update for drum Poland EN 140003791557 EHS V1.0 12-SEP-2023",
+      "language": "EN"
+    },
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02643600.PDF",
+      "type": "LMSDS",
+      "name": "Risella C 420 - Update for drum Poland PL 140003791557 EHS V1.0 12-SEP-2023",
+      "language": "PL"
+    }
+  ],
+  "packs": [],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "",
+  "physicalCharacteristics": [],
+  "active": false,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "007A0430",
+  "countryCode": "SG",
+  "locale": "en-SG",
+  "name": "Shell PANOLIN S5 Grease EAL A460 0",
+  "description": "Fully synthetic, readily biodegradable EP universal grease. Excellent load-bearing properties. Very good water resistance and good mechanical stability.",
+  "family": "-",
+  "parentCategory": null,
+  "category": "Synthetics based EP Greases",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Premium",
+  "viscosityGrade": "Grease (Semifluid)",
+  "viscosityType": "-",
+  "fluidType": "Synthetic",
+  "fluidSubType": "Ester",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/b46d99f2-af18-44a3-9213-1e4bf4fb245e.pdf",
+      "type": "GTDS",
+      "name": "PANOLIN S5 Grease EAL A460 0 EN TDG V1.1 23-Jul-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02643840.PDF",
+      "type": "LMSDS",
+      "name": "PANOLIN S5 Grease EAL A460 0 Singapore EN 140001435547 EHS V1.0 08-SEP-2023",
+      "language": "EN"
+    }
+  ],
+  "packs": [],
+  "globalSpecs": [],
+  "localSpecs": [],
+  "marketing": "",
+  "physicalCharacteristics": [],
+  "active": false,
+  "carbonNeutral": null,
+  "packShot": null,
+  "valueRecord": [],
+  "commerce": null
+}

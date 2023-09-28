@@ -1,0 +1,231 @@
+{
+  "id": "001F8323",
+  "countryCode": "IT",
+  "locale": "it-IT",
+  "name": "Shell Rimula R6 LM 10W-40",
+  "description": "Fully Synthetic Heavy Duty Diesel Engine Oil",
+  "family": "Rimula",
+  "parentCategory": "Lubrificanti per l'automotive",
+  "category": "Oli motore - Trazione pesante",
+  "applicationKeys": [
+    ""
+  ],
+  "position": "Premium",
+  "viscosityGrade": "10W-40",
+  "viscosityType": "SAE",
+  "fluidType": "Synthetic",
+  "fluidSubType": "Synthetic",
+  "globalDocs": [
+    {
+      "href": "https://www.shell-livedocs.com/data/published/en/64700905-ca76-4c9e-91d5-fae98b3a0ed4.pdf",
+      "type": "GTDS",
+      "name": "Rimula R6 LM 10W-40 (CK-4) EUR EN TDG V6.4 08-Sep-2023",
+      "language": "EN"
+    }
+  ],
+  "localDocs": [
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02643971.PDF",
+      "type": "LMSDS",
+      "name": "Rimula R6 LM 10W-40 (CK-4) EUR Italy EN 140007645406 EHS V1.6 13-SEP-2023",
+      "language": "EN"
+    },
+    {
+      "href": "www.epc.shell.com/docs/GSAP_msds_02643992.PDF",
+      "type": "LMSDS",
+      "name": "Rimula R6 LM 10W-40 (CK-4) EUR Italy IT 140007645406 EHS V1.6 13-SEP-2023",
+      "language": "IT"
+    },
+    {
+      "href": "https://www.shell-livedocs.com/data/published/it/c8b6cfe1-3429-474d-b468-6ea4b259288a.pdf",
+      "type": "LTDS",
+      "name": "Rimula R6 LM 10W-40 (CK-4) EUR Italy IT TDG V6.4 11-Sep-2023",
+      "language": "IT"
+    }
+  ],
+  "packs": [
+    {
+      "code": "001F8323_002VJW_A246",
+      "name": "IBC 1000 L Plastic T (1)",
+      "size": "1000",
+      "uom": "libbre",
+      "pack": "IBC",
+      "materialCode": "550044857",
+      "margin": "Not found",
+      "packShot": ""
+    },
+    {
+      "code": "001F8323_002VSH_A246",
+      "name": "Fusto 209 L T/H RYtop (1)",
+      "size": "209",
+      "uom": "libbre",
+      "pack": "Fusto",
+      "materialCode": "550044859",
+      "margin": "Not found",
+      "packShot": ""
+    },
+    {
+      "code": "001F8323_002VNF_A246",
+      "name": "Secchio 20 L O/H Plastic Helix Grey (1)",
+      "size": "20",
+      "uom": "libbre",
+      "pack": "Secchio",
+      "materialCode": "550044858",
+      "margin": "Not found",
+      "packShot": ""
+    }
+  ],
+  "globalSpecs": [
+    {
+      "name": "API CJ-4",
+      "organisation": "API",
+      "spec": "CJ-4"
+    },
+    {
+      "name": "Volvo VDS-4.5",
+      "organisation": "Volvo",
+      "spec": "VDS-4.5"
+    },
+    {
+      "name": "ACEA E6",
+      "organisation": "ACEA",
+      "spec": "E6"
+    },
+    {
+      "name": "ACEA E7",
+      "organisation": "ACEA",
+      "spec": "E7"
+    },
+    {
+      "name": "Mack EO-S 4.5",
+      "organisation": "Mack",
+      "spec": "EO-S 4.5"
+    },
+    {
+      "name": "API CH-4",
+      "organisation": "API",
+      "spec": "CH-4"
+    },
+    {
+      "name": "MB DTFR 15C110",
+      "organisation": "Mercedes-Benz",
+      "spec": "DTFR 15C110"
+    },
+    {
+      "name": "Deutz DQC IV-18 LA",
+      "organisation": "Deutz",
+      "spec": "DQC IV-18 LA"
+    },
+    {
+      "name": "MAN M 3271-1",
+      "organisation": "MAN",
+      "spec": "M 3271-1"
+    },
+    {
+      "name": "Cummins CES 20086",
+      "organisation": "Cummins",
+      "spec": "CES 20086"
+    },
+    {
+      "name": "Cummins CES 20081",
+      "organisation": "Cummins",
+      "spec": "CES 20081"
+    },
+    {
+      "name": "DAF Meets ACEA E6",
+      "organisation": "DAF",
+      "spec": "Meets ACEA E6"
+    },
+    {
+      "name": "MAN M 3477",
+      "organisation": "MAN",
+      "spec": "M 3477"
+    },
+    {
+      "name": "API CI-4",
+      "organisation": "API",
+      "spec": "CI-4"
+    },
+    {
+      "name": "Deutz DQC IV-10 LA",
+      "organisation": "Deutz",
+      "spec": "DQC IV-10 LA"
+    },
+    {
+      "name": "Scania Low Ash",
+      "organisation": "Scania",
+      "spec": "Low Ash"
+    },
+    {
+      "name": "Detroit Fluid Specification 93K218",
+      "organisation": "Detroit Fluid Specification",
+      "spec": "93K218"
+    },
+    {
+      "name": "Volvo VDS-4",
+      "organisation": "Volvo",
+      "spec": "VDS-4"
+    },
+    {
+      "name": "API CK-4",
+      "organisation": "API",
+      "spec": "CK-4"
+    },
+    {
+      "name": "MTU Category 3.1",
+      "organisation": "MTU",
+      "spec": "Category 3.1"
+    },
+    {
+      "name": "Renault Trucks RLD-3",
+      "organisation": "Renault Trucks",
+      "spec": "RLD-3"
+    },
+    {
+      "name": "Renault RLD-3",
+      "organisation": "Renault",
+      "spec": "RLD-3"
+    },
+    {
+      "name": "Detroit Fluid Specification 93K222",
+      "organisation": "Detroit Fluid Specification",
+      "spec": "93K222"
+    },
+    {
+      "name": "JASO DH-2",
+      "organisation": "JASO",
+      "spec": "DH-2"
+    },
+    {
+      "name": "Caterpillar ECF-3",
+      "organisation": "Caterpillar",
+      "spec": "ECF-3"
+    },
+    {
+      "name": "Mack EO-O Premium Plus",
+      "organisation": "Mack",
+      "spec": "EO-O Premium Plus"
+    },
+    {},
+    {
+      "name": "Iveco NG2 - Meets the requirements",
+      "organisation": "Iveco",
+      "spec": "NG2 - Meets the requirements"
+    }
+  ],
+  "localSpecs": [],
+  "marketing": "Olio completamente sintetico caratterizzato dalla tecnologia di additivi “Low-SAPS” che offre potere protettivo e risparmi in manutenzione.",
+  "physicalCharacteristics": [],
+  "active": true,
+  "carbonNeutral": null,
+  "packShot": "https://s3.amazonaws.com/oats.packshots/shell_lubematch/shell/4L-Rimula-R6-LM-10_40.png",
+  "valueRecord": [
+    {
+      "href": "https://shellvaluerecords.secure.force.com/DVRDatabase/servlet/fileField?retURL=%2FDVRDatabase%2Fapex%2FSHL_DVRKnowledgeSearch&entityId=ka00X000000Ino8QAC&field=Attachment__Name__s",
+      "family": "Rimula",
+      "savings": 480000,
+      "title": "Shell Rimula R6 LM 10W-40 (CJ-4)"
+    }
+  ],
+  "commerce": null
+}
